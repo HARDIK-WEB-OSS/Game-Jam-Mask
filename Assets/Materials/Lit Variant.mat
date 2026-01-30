@@ -11,29 +11,39 @@ Material:
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 06fc4125c0a4a5b4199182bf2f17a70b, type: 2}
   m_ModifiedSerializedProperties: 26
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _SPECULAR_SETUP
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
     - _Cull: 2
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
+    - _Cutoff: 0.451
+    - _DstBlend: 10
+    - _DstBlendAlpha: 10
     - _Metallic: 0
+    - _QueueOffset: 0
     - _Smoothness: 0
-    - _Surface: 0
-    - _ZWrite: 1
+    - _Surface: 1
+    - _WorkflowMode: 0
+    - _ZWrite: 0
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

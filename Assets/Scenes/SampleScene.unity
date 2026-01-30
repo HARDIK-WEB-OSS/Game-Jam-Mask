@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 32480489}
   - component: {fileID: 32480488}
   - component: {fileID: 32480487}
+  - component: {fileID: 32480493}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   agent: {fileID: 32480487}
   player: {fileID: 2138647493}
-  chaseRange: 10
+  chaseRange: 24.6
   points:
   - {fileID: 33982154}
   - {fileID: 841616462}
@@ -276,12 +277,39 @@ Transform:
   m_GameObject: {fileID: 32480486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.5965, y: 5.0053, z: 7.9953}
-  m_LocalScale: {x: 5.137558, y: 14.98647, z: 12.241956}
+  m_LocalPosition: {x: -19.0368, y: 2.8661, z: 9.9342}
+  m_LocalScale: {x: 2.0183423, y: 10.707833, z: 8.363704}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &32480493
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32480486}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &33982153
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +735,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 9fb22083f5c4d1f4c8739c2d8f12d9b1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ef0975b93135a9f4e9ded1aad121dacd, type: 2}
   m_BuildHeightMesh: 0
 --- !u!64 &1673900276
 MeshCollider:
@@ -728,7 +756,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1673900277
@@ -797,8 +825,8 @@ Transform:
   m_GameObject: {fileID: 1673900274}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.0632, y: -2.8, z: -7.9349}
-  m_LocalScale: {x: 11.990612, y: 1, z: 20.120037}
+  m_LocalPosition: {x: 13.8992, y: -2.8, z: 3}
+  m_LocalScale: {x: 20.938023, y: 1, z: 21.330933}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1045,6 +1073,8 @@ GameObject:
   - component: {fileID: 2138647492}
   - component: {fileID: 2138647491}
   - component: {fileID: 2138647490}
+  - component: {fileID: 2138647494}
+  - component: {fileID: 2138647495}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1139,12 +1169,52 @@ Transform:
   m_GameObject: {fileID: 2138647489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 1.5405, z: 9.4131}
-  m_LocalScale: {x: 5.37, y: 13.441019, z: 9.689679}
+  m_LocalPosition: {x: 28.4316, y: -0.7548, z: 12.8869}
+  m_LocalScale: {x: 2.233383, y: 8.850911, z: 8.024773}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138647494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138647489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734efecbfacde8643b5a35cd78a7e98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 13.23
+--- !u!54 &2138647495
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138647489}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
