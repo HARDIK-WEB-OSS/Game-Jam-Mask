@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/SampleScene/NavMesh-Plane.asset.meta
 guid: ef0975b93135a9f4e9ded1aad121dacd
+=======
+guid: 9149dc6ef348dbc4391b493bc3df2f40
+>>>>>>> 834ff7c13713f09cfc2c797cb11cbd561b428d5d:Assets/NavMesh-Plane.asset.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 23800000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
