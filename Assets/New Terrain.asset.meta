@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/New Terrain.asset.meta
 guid: fb034aa1290d22641b28ed543c950c18
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 15600000
+=======
+guid: 9fb22083f5c4d1f4c8739c2d8f12d9b1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+>>>>>>> parent of 7410a1c (Added NavMesh Data):Assets/NavMesh-Plane.asset.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
